@@ -9,9 +9,9 @@ class WikiPage(Base):
     id = Column(BIGINT, primary_key=True, autoincrement=True)
     title = Column(String(255), nullable=False)
     state = Column(BOOLEAN, nullable=False)
-    __table_args__ = (
-        {"schema": "wiki"}
-    )
+    # __table_args__ = (
+    #     {"schema": "wiki"}
+    # )
 
 
 class WikiPageRelation(Base):
@@ -20,6 +20,6 @@ class WikiPageRelation(Base):
     parent_id = Column(BIGINT, ForeignKey(WikiPage.id))
     child_id = Column(BIGINT, nullable=False)
     updated_at = Column(DateTime, nullable=False)
-    __table_args__ = (
-        {"schema": "wiki"}
-    )
+    # __table_args__ = (
+    #     {"schema": "wiki"}
+    # )

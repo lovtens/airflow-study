@@ -6,7 +6,8 @@ from airflow.operators.dummy_operator import DummyOperator
 from airflow.models import DAG
 from airflow.utils.dates import days_ago
 from postgres.database import init_db
-from custom_operator.crawl_operator import CrawlOperator
+# from custom_operator.crawl_operator import CrawlOperator
+from custom_operator.mongo_operator import CrawlOperator
 
 # 모든 태스크들에 설정할 default args
 args = {'owner': 'ollie',

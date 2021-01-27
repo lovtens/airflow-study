@@ -57,7 +57,7 @@ def crawl_doc(key, finder):
     if not doc:
         return
     p_child = re.compile(r"\[\[[^\[\]]*\]\]")
-    p_external = re.compile(r"^https?://")
+    p_external = re.compile(r".*https?://")
 
     child_list = []
     iterator = p_child.finditer(doc['text'])

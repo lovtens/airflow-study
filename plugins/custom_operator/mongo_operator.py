@@ -70,6 +70,8 @@ def crawl_doc(key, finder):
             m = p_external.match(key)
             if m:
                 continue
+            if not finder(key):
+                continue
             child_list.append(match_str_split[0])
 
     # # 부모 + 자식을 wiki_page insert
